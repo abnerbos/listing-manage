@@ -24,6 +24,7 @@ public class ListingTaskService implements IListingTaskService {
     @Override
     public List<ListingTask> getUnListing(int pageSize, int pageNum) {
         PageHelper.startPage(pageNum,pageSize);
+        //PageInfo page = new PageInfo(list);
         return listingTaskMapper.selectUnListing();
     }
 
