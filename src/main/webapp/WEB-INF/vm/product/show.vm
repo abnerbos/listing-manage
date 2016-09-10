@@ -1,0 +1,8 @@
+litbPid: $!product.litbPid <br>
+litbCategoryId: $!product.litbCategoryId <br>
+name: $!product.name <br>
+description: $!product.description <br>
+brandName: $!product.brandName <br>
+conditionNote: $!product.conditionNote <br>
+feature: $!product.feature <br>
+searchTerm: $!product.searchTerm <br>

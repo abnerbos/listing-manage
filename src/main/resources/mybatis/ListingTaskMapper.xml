@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.litb.listing.mapper.ListingTaskMapper">
+    <resultMap id="BaseResultMap" type="com.litb.listing.domain.ListingTask">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="merchant_id" jdbcType="INTEGER" property="merchantId" />
+        <result column="product_id" jdbcType="INTEGER" property="productId" />
+        <result column="sku_id" jdbcType="INTEGER" property="skuId" />
+        <result column="sku_code" jdbcType="VARCHAR" property="skuCode" />
+        <result column="listing_baseinfo_status" jdbcType="SMALLINT" property="listingBaseinfoStatus" />
+        <result column="listing_inventory_status" jdbcType="SMALLINT" property="listingInventoryStatus" />
+        <result column="listing_pricing_status" jdbcType="SMALLINT" property="listingPricingStatus" />
+        <result column="listing_image_status" jdbcType="SMALLINT" property="listingImageStatus" />
+        <result column="listing_relationship_status" jdbcType="SMALLINT" property="listingRelationshipStatus" />
+        <result column="close_status" jdbcType="SMALLINT" property="closeStatus" />
+        <result column="refresh_inventory_status" jdbcType="SMALLINT" property="refreshInventoryStatus" />
+        <result column="refresh_pricing_status" jdbcType="SMALLINT" property="refreshPricingStatus" />
+        <result column="quantity" jdbcType="INTEGER" property="quantity" />
+        <result column="price" jdbcType="REAL" property="price" />
+        <result column="fulfillment_latency" jdbcType="SMALLINT" property="fulfillmentLatency" />
+    </resultMap>
+
+
+
+    <select id="selectUnListing" resultMap="BaseResultMap">
+        SELECT * FROM
+        al_amws_listing_task
+        where
+        listing_baseinfo_status IS NULL
+    </select>
+
+
+
+</mapper>
