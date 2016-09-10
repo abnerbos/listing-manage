@@ -15,6 +15,7 @@
         <velocity_version>1.7</velocity_version>
         <mybatis.version>3.4.0</mybatis.version>
         <mybatisspring.version>1.1.1</mybatisspring.version>
+        <spring.security.version>3.2.3.RELEASE</spring.security.version>
 
     </properties>
 
@@ -40,6 +41,12 @@
             <artifactId>spring-context-support</artifactId>
             <version>3.2.4.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>3.2.4.RELEASE</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -110,6 +117,32 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.6.6</version>
             <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- spring security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
         </dependency>
 
     </dependencies>
